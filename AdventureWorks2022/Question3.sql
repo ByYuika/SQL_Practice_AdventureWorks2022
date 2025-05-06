@@ -14,4 +14,4 @@ JOIN Person.BusinessEntityAddress bea ON pp.BusinessEntityID = bea.BusinessEntit
 JOIN Person.Address pa ON pa.AddressID = bea.AddressID
 JOIN Person.StateProvince sp ON sp.StateProvinceID = pa.StateProvinceID
 JOIN Person.CountryRegion cr ON cr.CountryRegionCode = sp.CountryRegionCode
-where pp.PersonType = 'SP' OR (pa.PostalCode LIKE '9%' AND LEN(pa.PostalCode) = 5 AND cr.Name = 'United States')
+WHERE pp.PersonType = 'SP' OR (pa.PostalCode LIKE '9%' AND LEN(pa.PostalCode) = 5 AND cr.Name = 'United States')
